@@ -6,7 +6,6 @@
  * user guide available at https://docs.gradle.org/4.2.1/userguide/tutorial_java_projects.html
  */
 
-
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
@@ -14,8 +13,19 @@ apply plugin: 'idea'
 apply plugin: 'application'
 apply plugin: 'javafx-gradle-plugin'
 
+
 mainClassName = 'de.fynder.m4b_tagger.Main'
 
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/java"]
+            includes = ["**/*.fxml", "**/*.css"]
+            excludes = ["**/*.md"]
+        }
+    }
+}
 
 jar {
     manifest {
@@ -23,6 +33,37 @@ jar {
     }
 }
 
+
+dependencies {
+    // classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+
+    // The production code uses the SLF4J logging API at compile time
+    compile(
+//            'org.slf4j:slf4j-api:1.7.21',
+            'org.mp4parser:isoparser:1.9.31',
+            'org.mp4parser:muxer:1.9.31',
+            'org.mp4parser:streaming:1.9.31',
+            'net.bramp.ffmpeg:ffmpeg:0.6.1',
+
+            'com.airhacks:afterburner.fx:1.6.0'
+
+//            'org.jcodec:jcodec:0.2.1' // https://github.com/jcodec/jcodec
+//            'net.sourceforge.jaadec:jaad:0.8.4',
+//            'org.jcodec:jcodec:0.2.2-SNAPSHOT' // latest snapshot from lib
+            //'org.jcodec:jcodec:0.2.1'
+//             'com.github.jcodec:jcodec:mp4_metadata_editor-SNAPSHOT'
+
+    )
+
+    // Declare the dependency for your favourite test framework you want to use in your tests.
+    // TestNG is also supported by the Gradle Test task. Just change the
+    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
+    // 'test.useTestNG()' to your build script.
+    testCompile(
+            'junit:junit:5.+',
+            'org.mockito:mockito-core:2.+'
+    )
+}
 
 buildscript {
     dependencies {
@@ -38,6 +79,10 @@ buildscript {
 repositories {
     mavenLocal()
     mavenCentral()
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 /*

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="631.0" styleClass="airpad" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="de.fynder.m4b_tagger.presentation.app.AppController">
+    <BorderPane prefHeight="483.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <bottom>
+            <AnchorPane fx:id="statusPane" prefHeight="20.0" prefWidth="631.0"/>
+        </bottom>
+        <center>
+            <SplitPane dividerPositions="0.39635535307517084" focusTraversable="true" orientation="VERTICAL"
+                       prefHeight="200.0" prefWidth="160.0">
+                <ScrollPane prefHeight="235.0" prefWidth="629.0">
+                    <AnchorPane id="Content" fx:id="noteList" minHeight="0.0" minWidth="0.0"
+                                prefHeight="200.0" prefWidth="200.0"/>
+                </ScrollPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                    <TextArea id="noteText" fx:id="noteContent" prefHeight="227.0" prefWidth="629.0"
+                              wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+                </AnchorPane>
+            </SplitPane>
+        </center>
+        <top>
+            <TextField id="noteNameTxt" fx:id="noteName" onAction="#noteNameEntered" prefWidth="200.0"
+                       promptText="Search / Create &lt;Enter&gt;"/>
+        </top>
+    </BorderPane>
+</AnchorPane>

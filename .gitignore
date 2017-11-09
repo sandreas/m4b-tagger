@@ -24,3 +24,6 @@ hs_err_pid*
 *.iml
 *.ipr
 *.iws
+/_old
+/tmp/*
+!/tmp/.gitkeep

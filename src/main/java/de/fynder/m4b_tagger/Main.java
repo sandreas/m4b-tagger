@@ -1,53 +1,47 @@
 package de.fynder.m4b_tagger;
 
+
+import com.airhacks.afterburner.injection.Injector;
+import de.fynder.m4b_tagger.presentation.app.AppController;
+import de.fynder.m4b_tagger.presentation.app.AppView;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyCodeCombination;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 
-import java.nio.file.Paths;
 
 public class Main extends Application {
+
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        setUserAgentStylesheet(STYLESHEET_MODENA);
+        AppView appView = new AppView();
+        Scene scene = new Scene(appView.getView());
+        registerAccelerators(
+                appView, scene);
+        stage.setTitle("m4b-tagger");
+        final String uri = getClass().getResource("main.css").toExternalForm();
+        scene.getStylesheets().add(uri);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        Injector.forgetAll();
+    }
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-//        primaryStage.setTitle("m4b-tagger");
-//
-//        StackPane layout = new StackPane();
-//
-//        Scene scene = new Scene(layout, 300, 200);
-//        primaryStage.setScene(scene);
-//        primaryStage.show();
-
-        // http://www.mkyong.com/java/java-properties-file-examples/
-//        String homeDir = System.getProperty("user.home");
-//        String configDir = Paths.get(homeDir + "/.m4b-tagger");
-
-        String executable = "graft";
-
-        if(executableExists(executable)) {
-            System.out.println(executable + " exists");
-        }else {
-            System.out.println(executable + " is missing");
-        }
-
-
-
-        System.exit(0);
-    }
-
-    private boolean executableExists(String executable) {
-        try {
-            Runtime rt = Runtime.getRuntime();
-            Process proc = rt.exec(executable);
-            proc.waitFor();
-            return proc.exitValue() == 0;
-        } catch(Exception e) {
-            return false;
-        }
+    private void registerAccelerators(AppView appView, Scene scene) {
+        final AppController presenter = (AppController) appView.getPresenter();
+        scene.getAccelerators().put(
+                new KeyCodeCombination(KeyCode.S, KeyCombination.CONTROL_ANY),
+                presenter::save);
     }
 }
