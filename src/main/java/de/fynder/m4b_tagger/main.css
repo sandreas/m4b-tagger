@@ -1,3 +1,19 @@
 .root {
     -fx-font: 18px "Menlo,Verdana,Helvetica";
 }
+
+.player-button {
+    -fx-background-color: transparent;
+}
+
+.player-button FontAwesomeIcon {
+    -fx-fill: #666;
+}
+.player-button:hover FontAwesomeIcon
+{
+    -fx-fill: #000; /*linear-gradient(#70b4e5 0%, #247cbc 70%, #2c85c1 85%);*/
+}
+.player-button:pressed
+{
+  -fx-padding: 3px 0 0 3px
+}

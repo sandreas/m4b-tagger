@@ -28,7 +28,6 @@ public class AppController implements Initializable {
 
     public void noteNameEntered() {
         System.out.println("AppPresender.noteNameEntered()");
-
     }
 
     public void save() {

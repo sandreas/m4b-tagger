@@ -45,7 +45,8 @@ dependencies {
             'org.mp4parser:streaming:1.9.31',
             'net.bramp.ffmpeg:ffmpeg:0.6.1',
 
-            'com.airhacks:afterburner.fx:1.6.0'
+            'com.airhacks:afterburner.fx:1.6.0',
+            'de.jensd:fontawesomefx:8.1'
 
 //            'org.jcodec:jcodec:0.2.1' // https://github.com/jcodec/jcodec
 //            'net.sourceforge.jaadec:jaad:0.8.4',
