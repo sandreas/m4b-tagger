@@ -20,6 +20,7 @@ public class Main extends Application {
         setUserAgentStylesheet(STYLESHEET_MODENA);
         AppView appView = new AppView();
         Scene scene = new Scene(appView.getView());
+
         registerAccelerators(
                 appView, scene);
         stage.setTitle("m4b-tagger");
@@ -27,6 +28,7 @@ public class Main extends Application {
         scene.getStylesheets().add(uri);
         stage.setScene(scene);
         stage.show();
+
     }
 
     @Override

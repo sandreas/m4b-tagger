@@ -40,13 +40,34 @@ dependencies {
     // The production code uses the SLF4J logging API at compile time
     compile(
 //            'org.slf4j:slf4j-api:1.7.21',
-            'org.mp4parser:isoparser:1.9.31',
-            'org.mp4parser:muxer:1.9.31',
-            'org.mp4parser:streaming:1.9.31',
+//            'org.mp4parser:isoparser:1.9.31',
+//            'org.mp4parser:muxer:1.9.31',
+//            'org.mp4parser:streaming:1.9.31',
             'net.bramp.ffmpeg:ffmpeg:0.6.1',
 
             'com.airhacks:afterburner.fx:1.6.0',
-            'de.jensd:fontawesomefx:8.1'
+
+//            'de.jensd:fontawesomefx-emojione:3.1.1-9',
+            'de.jensd:fontawesomefx-fontawesome:4.7.0-5',
+//            'de.jensd:fontawesomefx-icons525:4.2.0-9',
+//            'de.jensd:fontawesomefx-materialdesignfont:2.0.26-9',
+//            'de.jensd:fontawesomefx-materialicons:2.2.0-9',
+//            'de.jensd:fontawesomefx-octicons:4.3.0-9',
+//            'de.jensd:fontawesomefx-weathericons:2.0.10-9',
+            'de.jensd:fontawesomefx-commons:8.15',
+            'de.jensd:fontawesomefx-controls:8.15',
+
+//            'de.jensd:fontawesomefx:8.15',
+//            'de.jensd:fontawesomefx-commons:8.15',
+//            'de.jensd:fontawesomefx-controls:8.15',
+//            'de.jensd:fontawesomefx-fontawesome:4.7.0-5',
+//             'de.jensd:fontawesomefx-commons:8.15'
+
+//            'de.jensd:fontawesomefx-materialdesignfont:1.6.50'
+//             'de.jensd:fontawesomefx-materialicons:2.2.0'
+//             'de.jensd:fontawesomefx-octicons:4.3.0'
+//             'de.jensd:fontawesomefx-icons525:2.6.0'
+//             'de.jensd:fontawesomefx-weathericons:2.0-3'
 
 //            'org.jcodec:jcodec:0.2.1' // https://github.com/jcodec/jcodec
 //            'net.sourceforge.jaadec:jaad:0.8.4',
@@ -81,6 +102,9 @@ repositories {
     mavenLocal()
     mavenCentral()
     jcenter()
+    maven {
+        url "https://dl.bintray.com/jerady/maven"
+    }
     flatDir {
         dirs 'libs'
     }

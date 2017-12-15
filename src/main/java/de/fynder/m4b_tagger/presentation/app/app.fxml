@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="631.0" styleClass="airpad" xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/8" fx:controller="de.fynder.m4b_tagger.presentation.app.AppController">
     <BorderPane prefHeight="483.0" prefWidth="631.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
@@ -43,14 +43,16 @@
                     <Button mnemonicParsing="false" GridPane.columnIndex="1" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="FAST_BACKWARD" size="10pt"/>
+
+
+                            <!--<FontAwesomeIcon iconName="FAST_BACKWARD" size="10pt"/>-->
 
                         </graphic>
                     </Button>
                     <Button mnemonicParsing="false" GridPane.columnIndex="2" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="BACKWARD" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="BACKWARD" size="10pt"/>-->
 
 
                         </graphic>
@@ -59,23 +61,24 @@
                     <Label text="Silences" GridPane.rowIndex="1"/>
                     <Button mnemonicParsing="false" GridPane.columnIndex="3" styleClass="player-button">
                         <graphic>
+                            <FontAwesomeIconView glyphName="PLAY" layoutX="226.0" layoutY="246.0" />
 
-                            <FontAwesomeIcon iconName="PLAY" size="10pt"/>
-                            <FontAwesomeIcon iconName="PAUSE" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="PLAY" size="10pt"/>-->
+                            <!--<FontAwesomeIcon iconName="PAUSE" size="10pt"/>-->
 
                         </graphic>
                     </Button>
                     <Button mnemonicParsing="false" GridPane.columnIndex="4" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="STOP" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="STOP" size="10pt"/>-->
 
                         </graphic>
                     </Button>
                     <Button mnemonicParsing="false" GridPane.columnIndex="5" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="FORWARD" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="FORWARD" size="10pt"/>-->
 
 
                         </graphic>
@@ -83,7 +86,7 @@
                     <Button mnemonicParsing="false" GridPane.columnIndex="6" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="FAST_FORWARD" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="FAST_FORWARD" size="10pt"/>-->
 
 
                         </graphic>
@@ -92,7 +95,7 @@
                             GridPane.rowIndex="1" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="FAST_BACKWARD" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="FAST_BACKWARD" size="10pt"/>-->
 
 
                         </graphic>
@@ -101,7 +104,7 @@
                             GridPane.rowIndex="1" styleClass="player-button">
                         <graphic>
 
-                            <FontAwesomeIcon iconName="FAST_FORWARD" size="10pt"/>
+                            <!--<FontAwesomeIcon iconName="FAST_FORWARD" size="10pt"/>-->
 
 
                         </graphic>
