@@ -43,6 +43,7 @@ dependencies {
 //            'org.mp4parser:isoparser:1.9.31',
 //            'org.mp4parser:muxer:1.9.31',
 //            'org.mp4parser:streaming:1.9.31',
+            'joda-time:joda-time:2.9.9',
             'net.bramp.ffmpeg:ffmpeg:0.6.1',
 
             'com.airhacks:afterburner.fx:1.6.0',
